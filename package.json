@@ -1,9 +1,9 @@
 {
-  "name": "node-viewerjs",
-  "author": "KO GmbH <http://www.kogmbh.com/>",
-  "description": "Document viewer component for PDF and ODF documents. Done with just HTML, CSS, and JavaScript. Powered by pdf.js and WebODF.",
-  "version": "0.6.4",
-  "contributors": [
+  "name"           : "node-viewerjs",
+  "author"         : "KO GmbH <http://www.kogmbh.com/>",
+  "description"    : "Document viewer component for PDF and ODF documents. Done with just HTML5, CSS3, and JavaScript. Powered by pdf.js and WebODF.",
+  "version"        : "0.6.7",
+  "contributors"   : [
     {
       "name": "KO GmbH",
       "site": "http://viewerjs.org/"
@@ -41,8 +41,8 @@
   },
   "dependencies": {
     "node-webodf": "git://github.com/vandernorth/WebODF.git",
-    "pdfjs-dist": "1.6.334",
-    "video.js": "5.13.2"
+    "pdfjs-dist" : "1.8",
+    "node-webodf": "git://github.com/vandernorth/WebODF.git"
   },
   "devDependencies": {
     "browserify": "^13",

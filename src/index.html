@@ -40,7 +40,7 @@
       limitations under the License.
 
     -->
-    <title>ViewerJS</title>
+    <title>Document Viewer</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
     <link href="video-js/video-js.css" rel="stylesheet">
@@ -88,7 +88,7 @@
                         <div class="splitToolbarButtonSeparator"></div>
                         <button id="zoomIn" class="toolbarButton zoomIn" title="Zoom In"></button-->
                     </div>
-                            <span id="scaleSelectContainer" class="dropdownToolbarButton">
+                    <span id="scaleSelectContainer" class="dropdownToolbarButton">
                                 <select id="scaleSelect" title="Zoom" oncontextmenu="return false;">
                                     <option id="pageAutoOption" value="auto" selected>Automatic</option>
                                     <option id="pageActualOption" value="page-actual">Actual Size</option>
@@ -112,6 +112,7 @@
         </div>
     </div>
     <div id="canvasContainer">
+        <div id="loading-document"></div>
         <div id="canvas"></div>
     </div>
     <div id="overlayNavigator" class="no-print">

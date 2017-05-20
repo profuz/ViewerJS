@@ -1,107 +1,107 @@
 /**
  * Multimedia Viewer Plugin using Video.js
- * 
+ *
  * @author Christoph Haas <christoph.h@sprinternet.at>
  */
 function MultimediaViewerPlugin() {
-	"use strict";
+    "use strict";
 
-	var videoElement = undefined,
-		videoSource = undefined,
-		self = this;
+    var videoElement = undefined,
+        videoSource = undefined,
+        self = this;
 
-	this.initialize = function (viewerElement, documentUrl) {
+    this.initialize = function (viewerElement, documentUrl) {
 
-		if(window.mimetype.indexOf("audio/") === 0) {
-			document.getElementsByTagName("body")[0].className = 'multimedia audio';
-			videoElement=document.createElement("audio");
-			videoElement.setAttribute('poster', ' ');
-		} else {
-			document.getElementsByTagName("body")[0].className = 'multimedia video';
-			videoElement=document.createElement("video");
-		}
-		videoElement.setAttribute('preload', 'auto');
-		videoElement.setAttribute('id', 'multimedia_viewer');
-		videoElement.setAttribute('controls', 'controls');
-		videoElement.setAttribute('class', 'video-js vjs-default-skin');
+        if(window.mimetype.indexOf("audio/") === 0) {
+            document.getElementsByTagName("body")[0].className = 'multimedia audio';
+            videoElement=document.createElement("audio");
+            videoElement.setAttribute('poster', ' ');
+        } else {
+            document.getElementsByTagName("body")[0].className = 'multimedia video';
+            videoElement=document.createElement("video");
+        }
+        videoElement.setAttribute('preload', 'auto');
+        videoElement.setAttribute('id', 'multimedia_viewer');
+        videoElement.setAttribute('controls', 'controls');
+        videoElement.setAttribute('class', 'video-js vjs-default-skin');
 
-		videoSource=document.createElement("source");
-		videoSource.setAttribute('src', documentUrl);
-		videoSource.setAttribute('type', window.mimetype);
-		videoElement.appendChild(videoSource);
+        videoSource=document.createElement("source");
+        videoSource.setAttribute('src', documentUrl);
+        videoSource.setAttribute('type', window.mimetype);
+        videoElement.appendChild(videoSource);
 
-		videoElement.setAttribute('poster', "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", false);
+        videoElement.setAttribute('poster', "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7", false);
 
-		viewerElement.appendChild(videoElement);
-		viewerElement.style.overflow = "auto";
+        viewerElement.appendChild(videoElement);
+        viewerElement.style.overflow = "auto";
 
-		var playPauseSource=document.createElement("div");
-		playPauseSource.setAttribute('class', 'playOrPause');
-		playPauseSource.setAttribute('id', 'playOrPause');
-		playPauseSource.addEventListener('click', function(){
-			if (videoElement.paused) {
-				videoElement.play();
-			} else {
-				videoElement.pause();
-			}
-		}, false);
-		viewerElement.appendChild(playPauseSource);
-		
-		// init viewerjs
-		videojs(
-			videoElement,
-			{controls:'enabled', autoplay: true, techOrder:['flash','html5']},
-			function() {
-			}
-		);
+        var playPauseSource=document.createElement("div");
+        playPauseSource.setAttribute('class', 'playOrPause');
+        playPauseSource.setAttribute('id', 'playOrPause');
+        playPauseSource.addEventListener('click', function(){
+            if (videoElement.paused) {
+                videoElement.play();
+            } else {
+                videoElement.pause();
+            }
+        }, false);
+        viewerElement.appendChild(playPauseSource);
 
-		self.onLoad();
-	};
+        // init viewerjs
+        videojs(
+            videoElement,
+            {controls:'enabled', autoplay: true, techOrder:['flash','html5']},
+            function() {
+            }
+        );
 
-	this.isSlideshow = function () {
-		return false;
-	};
+        self.onLoad();
+    };
 
-	this.onLoad = function () {
-	};
+    this.isSlideshow = function () {
+        return false;
+    };
 
-	this.fitToWidth = function (width) {
-	};
+    this.onLoad = function () {
+    };
 
-	this.fitToHeight = function (height) {
-	};
+    this.fitToWidth = function (width) {
+    };
 
-	this.fitToPage = function (width, height) {
-	};
+    this.fitToHeight = function (height) {
+    };
 
-	this.fitSmart = function (width) {
-	};
+    this.fitToPage = function (width, height) {
+    };
 
-	this.getZoomLevel = function () {
-	};
+    this.fitSmart = function (width) {
+    };
 
-	this.setZoomLevel = function (value) {
-	};
+    this.getZoomLevel = function () {
+    };
 
-	// return a list of tuples (pagename, pagenode)
-	this.getPages = function () {
-		return [videoElement];
-	};
+    this.setZoomLevel = function (value) {
+    };
 
-	this.showPage = function (n) {
-		// hide middle toolbar
-		document.getElementById('toolbarMiddleContainer').style.visibility = "hidden";
-	};
+    // return a list of tuples (pagename, pagenode)
+    this.getPages = function () {
+        return [videoElement];
+    };
 
-	this.getPluginName = function () {
-		return "MultimediaViewerPlugin";
-	};
+    this.showPage = function (n) {
+        // hide middle toolbar
+        document.getElementById('toolbarMiddleContainer').style.visibility = "hidden";
+    };
 
-	this.getPluginVersion = function () {
-		return "From Source";
-	};
+    this.getPluginName = function () {
+        return "MultimediaViewerPlugin";
+    };
 
-	this.getPluginURL = function () {
-		return "https://sprinternet.at";
-	};
+    this.getPluginVersion = function () {
+        return "From Source";
+    };
+
+    this.getPluginURL = function () {
+        return "https://sprinternet.at";
+    };
 }

@@ -14,5 +14,6 @@ console.log(`Listening on port 81.
   - http://localhost:81/index.html#/files/small.webm
   - http://localhost:81/index.html#/files/test.png
   - http://localhost:81/index.html#/files/text.txt
+  - http://localhost:81/index.html#/files/unknown.zfx
   
   `);
