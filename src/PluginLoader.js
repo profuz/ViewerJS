@@ -76,6 +76,18 @@
                     return PDFViewerPlugin;
                 }
             },
+            {
+                supportsMimetype:      function ( mimetype ) {
+                    return (mimetype.indexOf('text/html') === 0);
+                },
+                supportsFileExtension: function ( extension ) {
+                    return (extension === 'html');
+                },
+                path:                  "./HTMLViewerPlugin",
+                getClass:              function () {
+                    return HTMLViewerPlugin;
+                }
+            },
             (function () {
                 var imageMimetypes      = [
                     'image/jpeg',

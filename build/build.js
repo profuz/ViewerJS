@@ -18,6 +18,7 @@ shell.cp(path.resolve(sourcePdf, './build/pdf.worker.js'), releaseDir);
 shell.cp(path.resolve(sourcePdf, './web/compatibility.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'ODFViewerPlugin.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'PDFViewerPlugin.js'), releaseDir);
+shell.cp(path.resolve(sourceDir, 'HTMLViewerPlugin.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'ImageViewerPlugin.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'MultimediaViewerPlugin.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'UnknownFilePlugin.js'), releaseDir);

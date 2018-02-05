@@ -10,6 +10,9 @@ Compared to the original (http://viewerjs.org/) this fork:
 - No inline style and inline script tags in index.html
 - Can be found on NPM (node-viewerjs)
 
+## Changes 2
+- HTML viewer (can be used for docx with [mammoth](https://github.com/mwilliamson/mammoth.js))
+
 ## How to use with express
 ```javascript
 
