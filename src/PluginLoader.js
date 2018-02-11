@@ -88,6 +88,18 @@
                     return HTMLViewerPlugin;
                 }
             },
+            {
+                supportsMimetype:      function ( mimetype ) {
+                    return (mimetype.indexOf('text/plain') === 0);
+                },
+                supportsFileExtension: function ( extension ) {
+                    return (extension === 'txt');
+                },
+                path:                  "./TextViewerPlugin",
+                getClass:              function () {
+                    return TextViewerPlugin;
+                }
+            },
             (function () {
                 var imageMimetypes      = [
                     'image/jpeg',
