@@ -728,10 +728,10 @@ function Viewer( viewerPlugin, parameters ) {
             },
             {
                 supportsMimetype:      function ( mimetype ) {
-                    return (mimetype.indexOf('text/plain') === 0);
+                    return (mimetype.indexOf('text/plain') === 0 || mimetype.indexOf('application/json') === 0);
                 },
                 supportsFileExtension: function ( extension ) {
-                    return (extension === 'txt');
+                    return (extension === 'txt' || extension === 'json');
                 },
                 path:                  "./TextViewerPlugin",
                 getClass:              function () {
