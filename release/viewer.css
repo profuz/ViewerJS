@@ -220,7 +220,6 @@ select {
 }
 
 #titlebar {
-    display:            none;    
     position:           absolute;
     z-index:            2;
     top:                0px;
