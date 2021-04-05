@@ -39,7 +39,7 @@ function PDFViewerPlugin() {
     function init( callback ) {
 
         loadScript('./compatibility.js', function () {
-            loadScript('./pdf.js', callback);
+            loadScript('./pdf.min.js', callback);
             loadScript('./ui_utils.js');
             loadScript('./text_layer_builder.js');
         });
@@ -271,7 +271,7 @@ function PDFViewerPlugin() {
         document.getElementsByTagName("body")[0].className = 'pdf';
 
         init(function () {
-            PDFJS.workerSrc = "./pdf.worker.js";
+            PDFJS.workerSrc = "./pdf.worker.min.js";
             PDFJS.getDocument(location, null, passwordCallback).then(function loadPDF( doc ) {
                 pdfDocument = doc;
                 container   = viewContainer;

@@ -14,8 +14,9 @@ const shell      = require('shelljs'),
 
 shell.cp(path.resolve(sourceDir, 'index.html'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'example.local.css'), releaseDir);
-shell.cp(path.resolve(sourcePdf, './build/pdf.js'), releaseDir);
-shell.cp(path.resolve(sourcePdf, './build/pdf.worker.js'), releaseDir);
+shell.cp(path.resolve(sourcePdf, './build/pdf.min.js'), releaseDir);
+shell.cp(path.resolve(sourcePdf, './build/pdf.worker.min.js'), releaseDir);
+shell.sed('-i', /pdf\.worker/g, 'pdf.worker.min', releaseDir + '/pdf.min.js');
 shell.cp(path.resolve(sourcePdf, './web/compatibility.js'), releaseDir);
 shell.rm('-rf', releaseDir + '/video-js');
 shell.cp('-R', path.resolve(sourceVideo, './dist/'), releaseDir + '/video-js');
