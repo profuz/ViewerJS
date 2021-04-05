@@ -2,10 +2,13 @@ function TextViewerPlugin() {
     "use strict";
 
     var self         = this,
-        pluginName   = "HTMLViewerPlugin";
+        pluginName   = "TextViewerPlugin";
 
     this.initialize = function ( viewerElement, documentUrl ) {
         var iframe = document.createElement('iframe');
+
+        document.getElementsByTagName("body")[0].className = 'text';
+
         iframe.style.width = '100%';
         iframe.style.height = '99.5%';
         iframe.style.border = 'none';

@@ -16,6 +16,9 @@ function HTMLViewerPlugin() {
 
     this.initialize = function ( viewerElement, documentUrl ) {
         initCSS();
+
+        document.getElementsByTagName("body")[0].className = 'html';
+
         var iframe = document.createElement('iframe');
         iframe.style.width = '100%';
         iframe.style.height = '99.5%';
