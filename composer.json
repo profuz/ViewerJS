@@ -30,6 +30,9 @@
         "ODP",
         "OTP",
         "FODP",
+        "Multimedia",
+        "Audio",
+        "Video",
         "Viewer"
     ],
     "license": "AGPL-3.0",
@@ -41,48 +44,47 @@
     "extra": {
         "component": {
             "scripts": [
-              "release/ODFViewerPlugin.js",
-              "release/UnknownFilePlugin.js",
-              "release/ImageViewerPlugin.js",
-              "release/text_layer_builder.js",
-              "release/video-settings.js",
-              "release/pdf.worker.js",
-              "release/example.local.css",
-              "release/pdf.js",
               "release/compatibility.js",
-              "release/ui_utils.js",
+              "release/ImageViewerPlugin.js",
               "release/MultimediaViewerPlugin.js",
-              "release/webodf.js",
-              "release/viewer.js"
+              "release/ODFViewerPlugin.js",
+              "release/pdf.js",
+              "release/pdf.worker.js",
+              "release/text_layer_builder.js",
+              "release/ui_utils.js",
+              "release/UnknownFilePlugin.js",
+              "release/video-settings.js",
+              "release/viewer.js",
+              "release/webodf.js"
             ],
             "styles": [
                 "release/example.local.css",
                 "release/viewer.css"
             ],
             "files": [
-                "release/images/texture.png",
-                "release/images/toolbarButton-fullscreen.png",
-                "release/images/toolbarButton-zoomIn.png",
-                "release/images/toolbarButton-menuArrows.png",
-                "release/images/toolbarButton-pageUp.png",
-                "release/images/toolbarButton-zoomOut.png",
-                "release/images/toolbarButton-pageDown.png",
                 "release/images/kogmbh.png",
-                "release/images/nlnet.png",
-                "release/images/toolbarButton-download.png",
-                "release/images/toolbarButton-presentation.png",
                 "release/images/musicbg.png",
+                "release/images/nlnet.png",
+                "release/images/texture.png",
+                "release/images/toolbarButton-download.png",
+                "release/images/toolbarButton-fullscreen.png",
+                "release/images/toolbarButton-menuArrows.png",
+                "release/images/toolbarButton-pageDown.png",
+                "release/images/toolbarButton-pageUp.png",
+                "release/images/toolbarButton-presentation.png",
                 "release/images/toolbarButton-print.png",
+                "release/images/toolbarButton-zoomIn.png",
+                "release/images/toolbarButton-zoomOut.png",
                 "release/index.html",
+                "release/video-js/video-js.css",
                 "release/video-js/video-js.min.css",
                 "release/video-js/video-js.swf",
-                "release/video-js/video-js.css",
                 "release/video-js/alt/video-js-cdn.css",
                 "release/video-js/alt/video-js-cdn.min.css",
-                "release/video-js/font/VideoJS.svg",
-                "release/video-js/font/VideoJS.woff",
                 "release/video-js/font/VideoJS.eot",
-                "release/video-js/font/VideoJS.ttf"
+                "release/video-js/font/VideoJS.svg",
+                "release/video-js/font/VideoJS.ttf",
+                "release/video-js/font/VideoJS.woff"
             ]
         }
     }
