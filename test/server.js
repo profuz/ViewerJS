@@ -9,11 +9,11 @@ app.listen(5581);
 
 console.log(`Listening on port 5581.
  Try one of the following tests:
-  - http://localhost:5581/index.html#/files/pdf-test.pdf
-  - http://localhost:5581/index.html#/files/small.mp4
-  - http://localhost:5581/index.html#/files/small.webm
-  - http://localhost:5581/index.html#/files/test.png
+  - http://localhost:5581/index.html#/files/image.png
+  - http://localhost:5581/index.html#/files/pdf.pdf
   - http://localhost:5581/index.html#/files/text.txt
+  - http://localhost:5581/index.html#/files/video.mp4
+  - http://localhost:5581/index.html#/files/video.webm
   - http://localhost:5581/index.html#/files/unknown.zfx
 
 `);
