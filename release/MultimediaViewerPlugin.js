@@ -35,24 +35,11 @@ function MultimediaViewerPlugin() {
         viewerElement.appendChild(videoElement);
         viewerElement.style.overflow = "auto";
 
-        var playPauseSource=document.createElement("div");
-        playPauseSource.setAttribute('class', 'playOrPause');
-        playPauseSource.setAttribute('id', 'playOrPause');
-        playPauseSource.addEventListener('click', function(){
-            if (videoElement.paused) {
-                videoElement.play();
-            } else {
-                videoElement.pause();
-            }
-        }, false);
-        viewerElement.appendChild(playPauseSource);
-
         // init viewerjs
         videojs(
             videoElement,
             {
                 controls:  'enabled',
-                autoplay:  true,
                 techOrder: ['flash','html5']
             },
             function() {
