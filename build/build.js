@@ -30,7 +30,6 @@ shell.cp(path.resolve(sourceDir, 'TextViewerPlugin.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'ImageViewerPlugin.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'MultimediaViewerPlugin.js'), releaseDir);
 shell.cp(path.resolve(sourceDir, 'UnknownFilePlugin.js'), releaseDir);
-shell.cp(path.resolve(sourceDir, 'video-settings.js'), releaseDir);
 
 shell
     .cat([file('additionals.js'),

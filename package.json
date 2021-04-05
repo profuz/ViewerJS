@@ -1,8 +1,9 @@
 {
   "name": "node-viewerjs",
   "author": "KO GmbH <http://www.kogmbh.com/> & alii",
-  "description": "Document viewer component for PDF and ODF documents. Done with just HTML5, CSS3, and JavaScript. Powered by pdf.js and WebODF.",
+  "description": "Document viewer component for PDF and ODF documents and audio/video/images files. Done with just HTML5, CSS3, and JavaScript. Powered by pdf.js and WebODF.",
   "version": "0.7.1",
+  "license": "AGPL-3.0",
   "contributors": [
     {
       "name": "KO GmbH",
@@ -13,7 +14,6 @@
       "email": "jeffrey@grexx.net"
     }
   ],
-  "license": "AGPL-3.0",
   "keywords": [
     "OpenDocument",
     "ODF",
@@ -28,6 +28,9 @@
     "ODP",
     "OTP",
     "FODP",
+    "Multimedia",
+    "Audio",
+    "Video",
     "Viewer"
   ],
   "scripts": {
@@ -41,8 +44,8 @@
   },
   "dependencies": {
     "node-webodf": "git://github.com/vandernorth/WebODF.git",
-    "pdfjs-dist": "1.8",
-    "video.js": "5.13.2"
+    "pdfjs-dist": "^1.10.100",
+    "video.js": "^7.11.4"
   },
   "devDependencies": {
     "browserify": "^13",

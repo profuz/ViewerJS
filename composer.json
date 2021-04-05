@@ -53,7 +53,6 @@
               "release/text_layer_builder.js",
               "release/ui_utils.js",
               "release/UnknownFilePlugin.js",
-              "release/video-settings.js",
               "release/viewer.js",
               "release/webodf.js"
             ],
@@ -79,7 +78,6 @@
                 "release/video-js/video-js.css",
                 "release/video-js/video-js.min.css",
                 "release/video-js/video-js.js",
-                "release/video-js/video-js.swf",
                 "release/video-js/alt/video-js-cdn.css",
                 "release/video-js/alt/video-js-cdn.min.css",
                 "release/video-js/font/VideoJS.eot",

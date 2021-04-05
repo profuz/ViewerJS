@@ -40,7 +40,7 @@ function MultimediaViewerPlugin() {
             videoElement,
             {
                 controls:  'enabled',
-                techOrder: ['flash','html5']
+                techOrder: ['html5']
             },
             function() {
                 // This is functionally the same as the previous example.
