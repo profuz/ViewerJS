@@ -704,12 +704,12 @@ html[dir='rtl'] .dropdownToolbarButton {
 
 .toolbarButton.zoomOut::before {
     display: inline-block;
-    content: url(toolbarButton-zoomOut.png);
+    content: url(images/toolbarButton-zoomOut.png);
 }
 
 .toolbarButton.zoomIn::before {
     display: inline-block;
-    content: url(toolbarButton-zoomIn.png);
+    content: url(images/toolbarButton-zoomIn.png);
 }
 
 .toolbarField.pageNumber {

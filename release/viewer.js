@@ -223,7 +223,7 @@ function Viewer( viewerPlugin, parameters ) {
         document.title         = parameters.title;
         var documentName       = document.getElementById('documentName');
         documentName.innerHTML = "";
-        documentName.appendChild(documentName.ownerDocument.createTextNode(parameters.title));
+        documentName.appendChild(documentName.ownerDocument.createTextNode(decodeURIComponent(parameters.title)));
 
         viewerPlugin.onLoad = function () {
 
@@ -232,6 +232,8 @@ function Viewer( viewerPlugin, parameters ) {
                 canvasContainer.classList.add("slideshow");
                 // Show page nav controls only for presentations
                 pageSwitcher.style.visibility = 'visible';
+                // Added Zoom Widget
+                zoomWidget.style.visibility = 'visible';
             } else {
                 // For text documents, show the zoom widget.
                 zoomWidget.style.visibility = 'visible';
