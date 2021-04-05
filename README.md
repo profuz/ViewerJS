@@ -1,7 +1,10 @@
-# ViewerJS for node
+ViewerJS for node
+=================
 
 ## Changes
+
 Compared to the original (http://viewerjs.org/) this fork:
+
 - Will show a warning message if the document is not supported
 - Can play video files (thanks to https://github.com/Ryusei217/ViewerJS)
 - Can show image files (thanks to https://github.com/Ryusei217/ViewerJS)
@@ -11,11 +14,31 @@ Compared to the original (http://viewerjs.org/) this fork:
 - Can be found on NPM (node-viewerjs)
 
 ## Changes 2
+
 - HTML viewer (can be used for docx with [mammoth](https://github.com/mwilliamson/mammoth.js))
+- Text viewer
+
+## Changes 3
+
+- Merge fixes and features from [h44z](https://github.com/h44z/ViewerJS), [Ryusei217](https://github.com/Ryusei217/ViewerJS), [Illkkah](https://github.com/ilkkah/node-viewerjs-ilkkah), [vendernorth](https://github.com/vandernorth/ViewerJS), [boris-petrov](https://github.com/cozy/ViewerJS), [cozy](https://github.com/cozy/ViewerJS), [giftnuss](https://github.com/giftnuss/ViewerJS), [putuyuwono](https://github.com/putuyuwono/ViewerJS).
+- Update pdf.js and video.js.
+- Add OpenDocument test files (from https://webodf.org).
+- Allow to use argument "?file=my-file.odt" instead of the hash "#my-file.odt" to specify the file to display.
+
+## How to compile the release
+
+```sh
+npm install
+npm run build
+````
+
+# How to test
+
+Once installed and build, run `npm run test`, then go to http://localhost:5581/index.html#/files/text.odt.
 
 ## How to use with express
-```javascript
 
+```javascript
 var express = require('express'),
     app     = express();
 
@@ -23,7 +46,9 @@ app.use('/viewer', express.static('node_modules/node-viewerjs/release'));
 ```
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 # Original Readme
+
 The viewer uses HTML, CSS, and icons derived from the Mozilla PDF.js project.
 Some icons are derived from the http://www.iconsweets.com/ project under a Creative Commons Attribution 3.0 Unported license.
 
