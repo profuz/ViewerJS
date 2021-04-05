@@ -961,6 +961,10 @@ function Viewer( viewerPlugin, parameters ) {
             params = getQueryParams(document.location.search),
             Plugin;
 
+        if ( !documentUrl ) {
+            documentUrl = parameters.file;
+        }
+
         if ( documentUrl ) {
             // try to guess the title as filename from the location, if not set by parameter
             if ( !parameters.title ) {
