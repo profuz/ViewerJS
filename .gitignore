@@ -3,3 +3,4 @@ node_modules
 release/video-js/examples
 release/video-js/ie8
 release/video-js/*.zip
+.idea
