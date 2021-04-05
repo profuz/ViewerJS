@@ -1,5 +1,5 @@
 {
-  "name": "node-viewerjs-ilkkah",
+  "name": "node-viewerjs",
   "author": "KO GmbH <http://www.kogmbh.com/>",
   "description": "Document viewer component for PDF and ODF documents. Done with just HTML5, CSS3, and JavaScript. Powered by pdf.js and WebODF.",
   "version": "0.6.18",
@@ -41,7 +41,8 @@
   },
   "dependencies": {
     "node-webodf": "git://github.com/vandernorth/WebODF.git",
-    "pdfjs-dist": "1.8"
+    "pdfjs-dist": "1.8",
+    "video.js": "5.13.2"
   },
   "devDependencies": {
     "browserify": "^13",

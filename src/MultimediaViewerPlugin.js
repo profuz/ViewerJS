@@ -50,8 +50,13 @@ function MultimediaViewerPlugin() {
         // init viewerjs
         videojs(
             videoElement,
-            {controls:'enabled', autoplay: true, techOrder:['flash','html5']},
+            {
+                controls:  'enabled',
+                autoplay:  true,
+                techOrder: ['flash','html5']
+            },
             function() {
+                // This is functionally the same as the previous example.
             }
         );
 
