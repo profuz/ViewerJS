@@ -1,0 +1,94 @@
+{
+    "type": "component",
+    "name": "giftnuss/viewerjs",
+    "description": "Document viewer component for PDF and ODF documents. Done with just HTML, CSS, and JavaScript. Powered by pdf.js and WebODF.",
+    "authors": [
+        {
+          "name": "KO GmbH",
+          "homepage": "http://viewerjs.org/"
+        },
+        {
+          "name": "Jeffrey van Norden",
+          "email": "jeffrey@grexx.net"
+        },
+        {
+          "name": "Christoph Haas",
+          "email": "christoph.h@sprinternet.at"
+        }
+    ],
+    "keywords": [
+        "OpenDocument",
+        "ODF",
+        "PDF",
+        "Text",
+        "Document",
+        "Slides",
+        "Presentation",
+        "ODT",
+        "OTT",
+        "FODT",
+        "ODP",
+        "OTP",
+        "FODP",
+        "Viewer"
+    ],
+    "license": "AGPL-3.0",
+    "minimum-stability": "stable",
+    "homepage": "http://viewerjs.org/",
+    "require": {
+        "robloach/component-installer": "*"
+    },
+    "extra": {
+        "component": {
+            "scripts": [
+              "release/ODFViewerPlugin.js",
+              "release/UnknownFilePlugin.js",
+              "release/ImageViewerPlugin.js",
+              "release/text_layer_builder.js",
+              "release/video-settings.js",
+              "release/pdf.worker.js",
+              "release/example.local.css",
+              "release/pdf.js",
+              "release/compatibility.js",
+              "release/ui_utils.js",
+              "release/MultimediaViewerPlugin.js",
+              "release/webodf.js",
+              "release/viewer.js"
+            ],
+            "styles": [
+                "release/example.local.css",
+                "release/viewer.css"
+            ],
+            "files": [
+                "release/images/texture.png",
+                "release/images/toolbarButton-fullscreen.png",
+                "release/images/toolbarButton-zoomIn.png",
+                "release/images/toolbarButton-menuArrows.png",
+                "release/images/toolbarButton-pageUp.png",
+                "release/images/toolbarButton-zoomOut.png",
+                "release/images/file-music.svg",
+                "release/images/toolbarButton-pageDown.png",
+                "release/images/kogmbh.png",
+                "release/images/minus.svg",
+                "release/images/nlnet.png",
+                "release/images/toolbarButton-download.png",
+                "release/images/arrow-down.svg",
+                "release/images/arrow-up.svg",
+                "release/images/plus.svg",
+                "release/images/toolbarButton-presentation.png",
+                "release/images/musicbg.png",
+                "release/images/toolbarButton-print.png",
+                "release/index.html",
+                "release/video-js/video-js.min.css",
+                "release/video-js/video-js.swf",
+                "release/video-js/video-js.css",
+                "release/video-js/alt/video-js-cdn.css",
+                "release/video-js/alt/video-js-cdn.min.css",
+                "release/video-js/font/VideoJS.svg",
+                "release/video-js/font/VideoJS.woff",
+                "release/video-js/font/VideoJS.eot",
+                "release/video-js/font/VideoJS.ttf"
+            ]
+        }
+    }
+}

@@ -45,7 +45,7 @@
           content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
     <link href="video-js/video-js.css" rel="stylesheet">
     <script src="video-js/video.js"></script>
-    <script src="video-js/settings.js"></script>
+    <script src="video-settings.js"></script>
     <link href="viewer.css" rel="stylesheet">
 </head>
 <body>
@@ -59,13 +59,23 @@
             <button id="download" class="toolbarButton download" title="Download"></button>
         </div>
     </div>
+    <div class="menu">
+        <div class="left">
+            <button id="previous" class="btn page-up" title="Previous Page"></button>
+            <button id="next" class="btn page-down" title="Next Page"></button>
+        </div>
+        <div class="right">
+            <button id="zoomOut" class="btn zoom-out" title="Zoom Out"></button>
+            <button id="zoomIn" class="btn zoom-in" title="Zoom In"></button>
+        </div>
+    </div>
     <div id="toolbarContainer" class="no-print">
         <div id="toolbar">
             <div id="toolbarLeft">
                 <div id="navButtons" class="splitToolbarButton">
-                    <button id="previous" class="toolbarButton pageUp" title="Previous Page"></button>
+                    <!--button id="previous" class="toolbarButton pageUp" title="Previous Page"></button>
                     <div class="splitToolbarButtonSeparator"></div>
-                    <button id="next" class="toolbarButton pageDown" title="Next Page"></button>
+                    <button id="next" class="toolbarButton pageDown" title="Next Page"></button-->
                 </div>
                 <label id="pageNumberLabel" class="toolbarLabel" for="pageNumber">Page:</label>
                 <input type="number" id="pageNumber" class="toolbarField pageNumber"/>
@@ -74,9 +84,9 @@
             <div id="toolbarMiddleContainer" class="outerCenter">
                 <div id="toolbarMiddle" class="innerCenter">
                     <div id='zoomButtons' class="splitToolbarButton">
-                        <button id="zoomOut" class="toolbarButton zoomOut" title="Zoom Out"></button>
+                        <!--button id="zoomOut" class="toolbarButton zoomOut" title="Zoom Out"></button>
                         <div class="splitToolbarButtonSeparator"></div>
-                        <button id="zoomIn" class="toolbarButton zoomIn" title="Zoom In"></button>
+                        <button id="zoomIn" class="toolbarButton zoomIn" title="Zoom In"></button-->
                     </div>
                     <span id="scaleSelectContainer" class="dropdownToolbarButton">
                                 <select id="scaleSelect" title="Zoom" oncontextmenu="return false;">

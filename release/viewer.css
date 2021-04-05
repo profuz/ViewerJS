@@ -220,12 +220,14 @@ select {
 }
 
 #titlebar {
-    z-index:            2;
-    top:                0px;
-    left:               0px;
-    height:             32px;
-    width:              100%;
-    overflow:           hidden;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    height: 32px;
+    width: 100%;
+    overflow: hidden;
 
     -webkit-box-shadow: 0px 1px 3px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px 1px 3px rgba(50, 50, 50, 0.75);
@@ -257,13 +259,14 @@ select {
 }
 
 #toolbarContainer {
-    position:           absolute;
-    z-index:            2;
-    bottom:             0px;
-    left:               0px;
-    height:             32px;
-    width:              100%;
-    overflow:           hidden;
+    display: none;
+    position: absolute;
+    z-index: 2;
+    bottom: 0px;
+    left: 0px;
+    height: 32px;
+    width: 100%;
+    overflow: hidden;
 
     -webkit-box-shadow: 0px -1px 3px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    0px -1px 3px rgba(50, 50, 50, 0.75);
@@ -278,6 +281,7 @@ select {
 
 #toolbar {
     position: relative;
+    height: 100%;
 }
 
 #toolbarMiddleContainer, #toolbarLeft {
@@ -285,6 +289,7 @@ select {
 }
 
 #toolbarMiddleContainer {
+    display: none;
     z-index: -1;
 }
 
@@ -594,6 +599,20 @@ html[dir='rtl'] .dropdownToolbarButton {
                       0 1px 0 hsla(0, 0%, 100%, .05);
 }
 
+.toolbarButton.pageUp, .toolbarButton.pageDown {
+    background-color: white;
+}
+
+.toolbarButton.pageUp {
+    -webkit-mask:  url(images/arrow-up.svg) no-repeat 50% 50%;
+    mask: url(images/arrow-up.svg) no-repeat 50% 50%;
+}
+
+.toolbarButton.pageDown {
+    -webkit-mask:  url(images/arrow-down.svg) no-repeat 50% 50%;
+    mask: url(images/arrow-down.svg) no-repeat 50% 50%;
+}
+
 html[dir='ltr'] .splitToolbarButton > .toolbarButton:first-child,
 html[dir='rtl'] .splitToolbarButton > .toolbarButton:last-child {
     position:                  relative;
@@ -690,8 +709,9 @@ html[dir='rtl'] .dropdownToolbarButton {
 }
 
 .toolbarButton.about {
-    color:       #f2f2f2;
-    font-size:   14px;
+    display: none;
+    color: #F2F2F2;
+    font-size: 14px;
     font-weight: bold;
     line-height: 14px;
     font-family: sans-serif;
@@ -703,12 +723,19 @@ html[dir='rtl'] .dropdownToolbarButton {
 
 .toolbarButton.zoomOut::before {
     display: inline-block;
-    content: url(images/toolbarButton-zoomOut.png);
+    content: url(images/minus.svg);
 }
 
 .toolbarButton.zoomIn::before {
     display: inline-block;
-    content: url(images/toolbarButton-zoomIn.png);
+    content: url(images/plus.svg);
+}
+
+.toolbarField.pageNumber {
+  min-width: 16px;
+  text-align: right;
+  width: 40px;
+  display: none;
 }
 
 .toolbarButton.pageUp::before {
@@ -719,12 +746,6 @@ html[dir='rtl'] .dropdownToolbarButton {
 .toolbarButton.pageDown::before {
     display: inline-block;
     content: url(images/toolbarButton-pageDown.png);
-}
-
-.toolbarField.pageNumber {
-    min-width:  16px;
-    text-align: right;
-    width:      40px;
 }
 
 .toolbarField {
@@ -765,26 +786,35 @@ html[dir='rtl'] .dropdownToolbarButton {
 }
 
 .toolbarLabel {
-    min-width:           16px;
-    padding:             3px 6px 3px 2px;
-    margin:              4px 2px 4px 0;
-    border:              1px solid transparent;
-    border-radius:       2px;
-    color:               hsl(0, 0%, 85%);
-    font-size:           12px;
-    line-height:         14px;
-    text-align:          left;
-    -webkit-user-select: none;
-    -moz-user-select:    none;
-    cursor:              default;
+  display: none;
+  min-width: 16px;
+  padding: 3px 6px 3px 2px;
+  margin: 4px 2px 4px 0;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: hsl(0,0%,85%);
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  cursor: default;
 }
 
 #canvasContainer {
     overflow:         auto;
-    min-height: 100%;
-    height: 100%;
-    text-align:       center;
-    background-color: #888;
+
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    bottom: 32px;
+    left: 0;
+    text-align: center;
+
+    background-color: #32363F;
+    /*background-image: url(images/texture.png);*/
 }
 
 #canvasContainer.slideshow {
@@ -965,6 +995,101 @@ html[dir='rtl'] .dropdownToolbarButton {
         display: none !important;
     }
 }
+
+.playOrPause {
+    position: absolute;
+    top: 0;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: transparent;
+    border-radius: inherit;
+    border: 0;
+    z-index: 100000000000;
+}
+
+.video-js .vjs-big-play-button {
+    display: none;
+}
+
+.menu {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    height: 52px;
+}
+
+.multimedia .menu { display: none; }
+.multimedia #canvasContainer { padding: 0; }
+
+.menu .left, .menu .right {
+    margin: 5px;
+}
+.menu .left { float: left; display: none; }
+.menu .right { float: right; }
+
+.pdf .menu .left { display: block; }
+
+.menu .btn {
+    border: none;
+    margin: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    position: relative;
+}
+.menu .page-up {
+    -webkit-mask:  url(images/arrow-up.svg) no-repeat 50% 50%;
+    mask: url(images/arrow-up.svg) no-repeat 50% 50%;
+}
+.menu .page-down {
+    -webkit-mask:  url(images/arrow-down.svg) no-repeat 50% 50%;
+    mask: url(images/arrow-down.svg) no-repeat 50% 50%;
+}
+.menu .zoom-in {
+    -webkit-mask:  url(images/plus.svg) no-repeat 50% 50%;
+    mask: url(images/plus.svg) no-repeat 50% 50%;
+}
+.menu .zoom-out {
+    -webkit-mask:  url(images/minus.svg) no-repeat 50% 50%;
+    mask: url(images/minus.svg) no-repeat 50% 50%;
+}
+
+.audio .vjs-poster {
+    mask: url("images/file-music.svg") no-repeat 50% 50%;
+    -webkit-mask: url("images/file-music.svg") no-repeat 50% 50%;
+    mask-size: auto 150px;
+    -webkit-mask-size: auto 100px;
+    background-color: white;
+}
+
+.audio .vjs-fullscreen-control {
+    display: none;
+}
+
+.video-js {
+    background-color: #32363F;
+}
+
+.video-js .vjs-control-bar {
+    height: 4em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-js .vjs-control:before {
+    font-size: 2.5em;
+}
+
+.video-js .vjs-menu-button-inline:before {
+    width: 1.6em;
+}
+
+.video-js .vjs-volume-bar {
+    margin: 1.85em;
 
 #loading-document:after {
     /* with no content, nothing is rendered */

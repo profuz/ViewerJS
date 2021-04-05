@@ -268,6 +268,8 @@ function PDFViewerPlugin() {
             i,
             pluginCSS;
 
+        document.getElementsByTagName("body")[0].className = 'pdf';
+
         init(function () {
             PDFJS.workerSrc = "./pdf.worker.js";
             PDFJS.getDocument(location, null, passwordCallback).then(function loadPDF( doc ) {
