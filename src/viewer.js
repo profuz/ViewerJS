@@ -220,6 +220,8 @@ function Viewer( viewerPlugin, parameters ) {
                 canvasContainer.classList.add("slideshow");
                 // Show page nav controls only for presentations
                 pageSwitcher.style.visibility = 'visible';
+                // Added Zoom Widget
+                zoomWidget.style.visibility = 'visible';
             } else {
                 // For text documents, show the zoom widget.
                 zoomWidget.style.visibility = 'visible';
