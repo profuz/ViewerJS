@@ -66,10 +66,10 @@
             }()),
             {
                 supportsMimetype:      function ( mimetype ) {
-                    return (mimetype === 'application/pdf');
+                    return (mimetype === 'application/pdf' || mimetype === 'application/illustrator');
                 },
                 supportsFileExtension: function ( extension ) {
-                    return (extension === 'pdf');
+                    return (extension === 'pdf' || extension === 'ai');
                 },
                 path:                  "./PDFViewerPlugin.js",
                 getClass:              function () {
